@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Vehicle Service AI Assistant</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/styles.css"
+    >
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <!-- LOGIN SCREEN -->
+    <section id="login-screen" class="screen">
+
+        <div class="login-card">
+
+            <div class="brand-icon">🚗</div>
+
+            <h1>Vehicle Service AI</h1>
+
+            <p class="subtitle">
+                Vehicle Service Centre Knowledge & Booking Assistant
+            </p>
+
+            <form id="login-form">
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                </div>
+
+                <button
+                    type="submit"
+                    id="login-button"
+                    class="primary-button"
+                >
+                    Login
+                </button>
+
+            </form>
+
+            <div
+                id="login-error"
+                class="error-message hidden"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CHAT SCREEN -->
+    <section id="chat-screen" class="screen hidden">
+
+        <div class="chat-app">
+
+            <!-- HEADER -->
+            <header class="chat-header">
+
+                <div class="header-brand">
+
+                    <div class="header-icon">
+                        🚗
+                    </div>
+
+                    <div>
+                        <h1>Vehicle Service AI Assistant</h1>
+
+                        <div class="connection-status">
+                            <span
+                                id="status-dot"
+                                class="status-dot offline"
+                            ></span>
+
+                            <span id="connection-status">
+                                Disconnected
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button
+                    id="logout-button"
+                    class="logout-button"
+                >
+                    Logout
+                </button>
+
+            </header>
+
+
+            <!-- CHAT AREA -->
+            <main
+                id="chat-messages"
+                class="chat-messages"
+            >
+
+                <!-- Welcome message -->
+                <div class="message assistant-message">
+
+                    <div class="message-avatar">
+                        🤖
+                    </div>
+
+                    <div class="message-content">
+
+                        <div class="message-name">
+                            Vehicle Service AI
+                        </div>
+
+                        <div class="message-bubble">
+
+                            <p>
+                                Hello! I am your Vehicle Service AI
+                                Assistant.
+                            </p>
+
+                            <p>
+                                You can ask me questions about vehicle
+                                maintenance, servicing, and approved
+                                service-centre knowledge.
+                            </p>
+
+                            <p class="welcome-note">
+                                For safety-critical vehicle problems,
+                                I will recommend professional assistance.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </main>
+
+
+            <!-- LOADING INDICATOR -->
+            <div
+                id="loading-indicator"
+                class="loading-container hidden"
+            >
+
+                <div class="message-avatar">
+                    🤖
+                </div>
+
+                <div class="typing-indicator">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+                <span class="loading-text">
+                    Assistant is thinking...
+                </span>
+
+            </div>
+
+
+            <!-- ERROR -->
+            <div
+                id="chat-error"
+                class="chat-error hidden"
+            ></div>
+
+
+            <!-- INPUT AREA -->
+            <footer class="chat-input-area">
+
+                <form id="chat-form">
+
+                    <textarea
+                        id="question-input"
+                        rows="1"
+                        placeholder="Ask a vehicle service question..."
+                        maxlength="5000"
+                        required
+                    ></textarea>
+
+                    <button
+                        type="submit"
+                        id="send-button"
+                        class="send-button"
+                        title="Send message"
+                    >
+                        ➤
+                    </button>
+
+                </form>
+
+                <div class="input-help">
+                    Press Enter to send • Shift + Enter for a new line
+                </div>
+
+            </footer>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<script src="/static/chat.js"></script>
+
+</body>
+</html>

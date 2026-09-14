@@ -1,0 +1,115 @@
+# ==========================================
+# Python
+# ==========================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ==========================================
+# Environment / Secrets
+# ==========================================
+
+.env
+.env.*
+!.env.example
+
+# Secret files
+*.pem
+*.key
+*.secret
+secrets/
+credentials/
+
+# ==========================================
+# IDE / Editor
+# ==========================================
+
+.vscode/
+.idea/
+
+# ==========================================
+# Testing / Coverage
+# ==========================================
+
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# ==========================================
+# Type checking / linters
+# ==========================================
+
+.mypy_cache/
+.pyright/
+.ruff_cache/
+
+# ==========================================
+# Application local data
+# ==========================================
+
+data/storage/*
+data/vector_index/*
+
+# Keep the directories but not private/generated files
+!data/storage/.gitkeep
+!data/vector_index/.gitkeep
+
+# ==========================================
+# Uploaded/private files
+# ==========================================
+
+uploads/
+uploaded_files/
+private_uploads/
+
+# Document files that may contain private/customer information
+*.pdf
+*.docx
+
+# ==========================================
+# Logs
+# ==========================================
+
+*.log
+logs/
+
+# ==========================================
+# OS generated files
+# ==========================================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================================
+# Database/local files
+# ==========================================
+
+*.sqlite
+*.sqlite3
+*.db
+
+# ==========================================
+# Temporary files
+# ==========================================
+
+*.tmp
+*.temp
+*.bak
+*.swp
